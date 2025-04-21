@@ -11,7 +11,7 @@ export default async function NewGroup() {
   }
 
   return (
-    <div className="mt-40">
+    <div className="mt-24 mb-4">
       <NewGroupForm loggendUser={loggedUser} />
     </div>
   )
