@@ -115,7 +115,7 @@ async function sendEmailToParticipants(participants: IParticipant[], groupName: 
     await Promise.all(
       participants.map((participant) => {
         resend.emails.send({
-          from: "",
+          from: process.env.RESEND_FROM_EMAIL || "",
           to: participant.email,
           subject: `Sorteio de amigo secreto - ${groupName}`,
           html: `<p>Você está participando do amigo secreto do grupo "${groupName}". <br /> <br />
